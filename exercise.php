@@ -87,7 +87,7 @@
 
     //task 3 sistem tiket bioskop ini juga yssa
     $saldo = 50000;
-    $kursi = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    $kursi_keseluruhan = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     $kursi_tersedia = [1, 2, 5, 6, 7, 8];
     $film = ['together', 'dopamin', 'the running man'];
     $harga_tiket = 30000;
@@ -100,7 +100,7 @@
         echo "uang kamu kurang cuma Rp. " . $saldo . " sedangkan harga tiketnya Rp. " . $harga_tiket ."</br>";
     } else if (!in_array($kursi_pilihan, $kursi_tersedia)) { // in_array buat cek apakah valuenya ada di array reference (params pertama value dan params kedua array reference)
         echo "kursi udah ada yang ngisi, pilih kursi yang lain aja!</br>";
-    } else if (!in_array($kursi_pilihan, $kursi)) { // bacanya kursi pilihan != kursi 
+    } else if (!in_array($kursi_pilihan, $kursi_keseluruhan)) { // bacanya kursi pilihan != kursi 
         echo "kursi nya kan cuma ada 10 kenapa malah milih kursi " . $kursi_pilihan . "</br>"; 
     } else if (!in_array($film_pilihan, $film)) {
         echo "Film tidak tersedia! </br>";
